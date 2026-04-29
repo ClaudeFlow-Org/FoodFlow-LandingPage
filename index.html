@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodFlow</title>
+  <link rel="icon" href="public/assets/images/foodflow-mark.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="public/assets/styles/styles.css">
+</head>
+
+<body data-cc-id="cc-1">
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="public/assets/images/foodflow-mark.png" alt="" />
+        </span>
+        <span class="brand-text">FoodFlow</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#home" data-i18n="nav.home">Inicio</a>
+        <a href="#features" data-i18n="nav.features">Funciones</a>
+        <a href="#benefits" data-i18n="nav.benefits">Beneficios</a>
+        <a href="#how" data-i18n="nav.how">Cómo funciona</a>
+        <a href="#plans" data-i18n="nav.plans">Planes</a>
+        <a href="#contact" data-i18n="nav.contact">Contacto</a>
+      </div>
+
+      <div class="nav-right">
+        <div class="lang" id="lang-switch">
+          <button data-lang="es" class="active">
+            <span class="lang-flag" aria-hidden="true">
+              <svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
+                <rect width="18" height="12" fill="#C60B1E"/>
+                <rect y="3" width="18" height="6" fill="#FFC400"/>
+              </svg>
+            </span>
+            <span class="lang-label">ES</span>
+          </button>
+          <button data-lang="en">
+            <span class="lang-flag" aria-hidden="true">
+              <svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
+                <rect width="18" height="12" fill="#012169"/>
+                <path d="M0 0l18 12M18 0L0 12" stroke="#FFFFFF" stroke-width="3"/>
+                <path d="M0 0l18 12M18 0L0 12" stroke="#C8102E" stroke-width="1.5"/>
+                <path d="M9 0v12M0 6h18" stroke="#FFFFFF" stroke-width="4"/>
+                <path d="M9 0v12M0 6h18" stroke="#C8102E" stroke-width="2"/>
+              </svg>
+            </span>
+            <span class="lang-label">EN</span>
+          </button>
+        </div>
+        <a class="btn btn-primary" href="#plans" data-i18n="cta.start">Comenzar ahora</a>
+        <button class="menu-toggle btn-ghost btn" id="menu-toggle" aria-label="Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#home" data-i18n="nav.home">Inicio</a>
+      <a href="#features" data-i18n="nav.features">Funciones</a>
+      <a href="#benefits" data-i18n="nav.benefits">Beneficios</a>
+      <a href="#how" data-i18n="nav.how">Cómo funciona</a>
+      <a href="#plans" data-i18n="nav.plans">Planes</a>
+      <a href="#contact" data-i18n="nav.contact">Contacto</a>
+      <a class="btn btn-primary" href="#plans" data-i18n="cta.start">Comenzar ahora</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-pattern"></div>
+    <div class="container hero-grid">
+      <div data-reveal class="in">
+        <h1 class="hero-title" style="margin-top:0">
+          <span data-i18n="hero.title.a">Controla las finanzas de tu restaurante con</span><br>
+          <span class="serif accent" data-i18n="hero.title.b">claridad</span>
+        </h1>
+        <p class="hero-sub" data-i18n="hero.sub">FoodFlow centraliza ingresos, gastos, inventario, órdenes y reportes para que tomes decisiones más inteligentes.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-orange" href="#plans">
+            <span data-i18n="cta.start">Comenzar ahora</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a class="btn btn-ghost" href="#features" data-i18n="cta.features">Ver funciones</a>
+        </div>
+      </div>
+
+      <div class="hero-art in" data-reveal aria-hidden="true">
+        <div class="ha-glow"></div>
+        <div class="ha-bg">
+          <div class="ha-grid"></div>
+        </div>
+
+        <div class="ha-card ha-receipt">
+          <div class="receipt-h">Comanda #128</div>
+          <div class="receipt-row"><span>Lomo saltado</span><span>S/ 32</span></div>
+          <div class="receipt-row"><span>Ceviche</span><span>S/ 28</span></div>
+          <div class="receipt-row"><span>Chicha</span><span>S/ 8</span></div>
+          <div class="receipt-row h"><span>Total</span><span>S/ 68</span></div>
+        </div>
+
+        <div class="ha-card ha-metric">
+          <div class="lbl" data-i18n="hero.art.margin">Margen del día</div>
+          <div class="val">31.4%</div>
+          <span class="delta">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+            +4.2 vs. ayer
+          </span>
+        </div>
+
+        <div class="ha-card ha-flow">
+          <div class="lbl" data-i18n="hero.art.flow">Distribución</div>
+          <div style="margin-top:8px"></div>
+          <div class="flow-bar"><i style="width:62%;background:var(--orange-light)"></i></div>
+          <div class="flow-row">
+            <span class="sw" style="background:var(--orange-light)"></span>
+            <span style="flex:1" data-i18n="hero.art.income">Ingresos</span>
+            <b>62%</b>
+          </div>
+          <div class="flow-bar"><i style="width:26%;background:var(--terracotta)"></i></div>
+          <div class="flow-row">
+            <span class="sw" style="background:var(--terracotta)"></span>
+            <span style="flex:1" data-i18n="hero.art.cost">Costo</span>
+            <b>26%</b>
+          </div>
+          <div class="flow-bar"><i style="width:12%;background:var(--sage)"></i></div>
+          <div class="flow-row">
+            <span class="sw" style="background:var(--sage)"></span>
+            <span style="flex:1" data-i18n="hero.art.opex">Operación</span>
+            <b>12%</b>
+          </div>
+        </div>
+
+        <div class="ha-card ha-inv">
+          <div class="lbl" data-i18n="hero.art.stock">Inventario</div>
+          <div class="inv-grid">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <div class="ha-dish">
+          <img src="public/assets/images/foodflow-mark.png" alt="FoodFlow" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <div class="trust">
+    <div class="container trust-inner">
+      <span class="trust-label" data-i18n="trust.label">Diseñado con y para</span>
+      <div class="trust-list">
+        <span data-i18n="trust.a">Bistrós independientes</span>
+        <span data-i18n="trust.b">Cafeterías</span>
+        <span data-i18n="trust.c">Panaderías</span>
+        <span data-i18n="trust.d">Restaurantes medianos</span>
+        <span data-i18n="trust.e">Food trucks</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROBLEM -->
+  <section class="problem" id="problem">
+    <div class="container">
+      <div class="sec-head in" data-reveal>
+        <h2 class="sec-title">
+          <span data-i18n="problem.title.a">Tu restaurante vende, pero ¿realmente</span>
+          <span class="serif" style="color:var(--coral)" data-i18n="problem.title.b">gana?</span>
+        </h2>
+        <p class="sec-sub" data-i18n="problem.sub">Demasiados negocios gastronómicos viven con información dispersa. Saben cuánto vendieron, pero no cuánto ganaron.</p>
+      </div>
+
+      <div class="problem-grid">
+        <div class="pain in" data-reveal>
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 6h20"></path>
+              <path d="M3 6v13a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6"></path>
+              <line x1="6" y1="10" x2="18" y2="10"></line>
+              <line x1="6" y1="14" x2="14" y2="14"></line>
+            </svg>
+          </div>
+          <h4 data-i18n="pain.1.t">Cuadernos y apuntes sueltos</h4>
+          <p data-i18n="pain.1.d">Información clave guardada en libretas que se pierden o nadie revisa.</p>
+        </div>
+        <div class="pain in" data-reveal>
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+              <line x1="3" y1="9" x2="21" y2="9"></line>
+              <line x1="9" y1="3" x2="9" y2="21"></line>
+            </svg>
+          </div>
+          <h4 data-i18n="pain.2.t">Hojas de cálculo desconectadas</h4>
+          <p data-i18n="pain.2.d">Archivos con fórmulas frágiles que solo entiende quien los hizo.</p>
+        </div>
+        <div class="pain in" data-reveal>
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v6"></path>
+              <path d="M12 16v6"></path>
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M2 12h6"></path>
+              <path d="M16 12h6"></path>
+            </svg>
+          </div>
+          <h4 data-i18n="pain.3.t">POS solo para vender</h4>
+          <p data-i18n="pain.3.d">Registra órdenes, pero no responde si el restaurante es realmente rentable.</p>
+        </div>
+        <div class="pain in" data-reveal>
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+            </svg>
+          </div>
+          <h4 data-i18n="pain.4.t">Inventario por memoria</h4>
+          <p data-i18n="pain.4.d">Sobras, mermas y desabastecimientos que nadie ve hasta que es tarde.</p>
+        </div>
+        <div class="pain in" data-reveal>
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <h4 data-i18n="pain.5.t">Reportes a destiempo</h4>
+          <p data-i18n="pain.5.d">Cuando llegan los números del mes, ya no se puede corregir el rumbo.</p>
+        </div>
+        <div class="pain in" data-reveal>
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 11l3 3L22 4"></path>
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+            </svg>
+          </div>
+          <h4 data-i18n="pain.6.t">Decisiones por intuición</h4>
+          <p data-i18n="pain.6.d">Precios, compras y menú definidos al ojo, sin datos que respalden.</p>
+        </div>
+      </div>
+
+      <p class="problem-quote" data-reveal>
+        <span data-i18n="problem.quote.a">Vender todos los días no es lo mismo que </span>
+        <em data-i18n="problem.quote.b">ganar dinero</em>
+        <span data-i18n="problem.quote.c"> todos los días.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="solution" id="solution">
+    <div class="container solution-grid">
+      <div data-reveal>
+        <h2 class="sec-title" style="text-align:left">
+          <span data-i18n="solution.title.a">Un solo lugar para entender</span><br>
+          <span class="serif accent" data-i18n="solution.title.b">cómo va tu negocio</span>
+        </h2>
+        <p style="font-size:18px; color:var(--ink-2); margin:20px 0 0; max-width:520px; line-height:1.65" data-i18n="solution.sub">
+          FoodFlow es una plataforma especializada que organiza la información financiera y operativa de tu restaurante en una sola vista clara y accionable.
+        </p>
+        <ul class="solution-list">
+          <li>
+            <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+            <span data-i18n="solution.l1">Pensado para dueños sin formación contable</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+            <span data-i18n="solution.l2">Visual, simple y enfocado en decisiones diarias</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+            <span data-i18n="solution.l3">Diseñado específicamente para gastronomía</span>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+            <span data-i18n="solution.l4">Centraliza ingresos, gastos, inventario y menú</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="solution-art" data-reveal aria-hidden="true">
+        <div class="orbit"></div>
+        <div class="orbit orbit-2"></div>
+        <div class="center-orb"><img src="public/assets/images/foodflow-mark.png" alt="FoodFlow" /></div>
+
+        <div class="orbit-pill op-1">
+          <span class="ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></span>
+          <span data-i18n="orbit.income">Ingresos</span>
+        </div>
+        <div class="orbit-pill op-2">
+          <span class="ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg></span>
+          <span data-i18n="orbit.inventory">Inventario</span>
+        </div>
+        <div class="orbit-pill op-3">
+          <span class="ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg></span>
+          <span data-i18n="orbit.orders">Órdenes</span>
+        </div>
+        <div class="orbit-pill op-4">
+          <span class="ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></span>
+          <span data-i18n="orbit.reports">Reportes</span>
+        </div>
+        <div class="orbit-pill op-5">
+          <span class="ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18M5 11a7 7 0 0 1 14 0"></path></svg></span>
+          <span data-i18n="orbit.menu">Menú</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="sec-head" data-reveal>
+        <h2 class="sec-title" style="color:var(--cream)">
+          <span data-i18n="features.title.a">Todo lo que tu restaurante</span>
+          <span class="serif" style="color:var(--orange-soft)" data-i18n="features.title.b">necesita saber</span>
+        </h2>
+        <p class="sec-sub" data-i18n="features.sub">Módulos diseñados para responder las preguntas que un dueño de restaurante se hace cada día.</p>
+      </div>
+
+      <div class="feat-grid">
+        <article class="feat feat-big span-7" data-reveal>
+          <div>
+            <div class="feat-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <h3 data-i18n="feat.1.t">Finanzas centralizadas</h3>
+            <p data-i18n="feat.1.d">Ingresos, gastos, costos y flujo de caja conviven en un solo modelo, no en cinco hojas separadas.</p>
+          </div>
+          <div class="stack">
+            <span class="chip" data-i18n="feat.1.c1">Flujo de caja</span>
+            <span class="chip" data-i18n="feat.1.c2">Costos fijos</span>
+            <span class="chip" data-i18n="feat.1.c3">Costos variables</span>
+            <span class="chip" data-i18n="feat.1.c4">Cierre diario</span>
+          </div>
+          <span class="deco"></span>
+        </article>
+
+        <article class="feat span-5" data-reveal>
+          <div class="feat-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+          </div>
+          <h3 data-i18n="feat.2.t">Reportes claros</h3>
+          <p data-i18n="feat.2.d">Vistas diarias, semanales y mensuales que cualquier dueño puede leer sin saber contabilidad.</p>
+          <div class="feat-mini-stack">
+            <div class="mini-card"><b>D</b><span data-i18n="feat.2.daily">Diario</span></div>
+            <div class="mini-card"><b>S</b><span data-i18n="feat.2.weekly">Semanal</span></div>
+            <div class="mini-card"><b>M</b><span data-i18n="feat.2.monthly">Mensual</span></div>
+          </div>
+        </article>
+
+        <article class="feat span-4" data-reveal>
+          <div class="feat-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            </svg>
+          </div>
+          <h3 data-i18n="feat.3.t">Inventario</h3>
+          <p data-i18n="feat.3.d">Stock real, alertas tempranas y costos por insumo para evitar mermas y compras de pánico.</p>
+        </article>
+
+        <article class="feat span-4" data-reveal>
+          <div class="feat-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path>
+            </svg>
+          </div>
+          <h3 data-i18n="feat.4.t">Control de órdenes</h3>
+          <p data-i18n="feat.4.d">Pedidos en sala, delivery y mostrador en una sola línea de tiempo entendible.</p>
+        </article>
+
+        <article class="feat span-4" data-reveal>
+          <div class="feat-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <h3 data-i18n="feat.5.t">Platos estrella</h3>
+          <p data-i18n="feat.5.d">Identifica los platos que más venden y los que más margen dejan, no son siempre los mismos.</p>
+        </article>
+
+        <article class="feat span-6" data-reveal>
+          <div class="feat-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 11h18"></path>
+              <path d="M5 11a7 7 0 0 1 14 0"></path>
+              <path d="M3 11l1 4a3 3 0 0 0 3 2h10a3 3 0 0 0 3-2l1-4"></path>
+            </svg>
+          </div>
+          <h3 data-i18n="feat.6.t">Gestión de menú</h3>
+          <p data-i18n="feat.6.d">Costo por plato, precios sugeridos y combos. Tu carta como una herramienta financiera, no un PDF estático.</p>
+        </article>
+
+        <article class="feat span-6" data-reveal>
+          <div class="feat-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <h3 data-i18n="feat.7.t">Perfil y suscripciones</h3>
+          <p data-i18n="feat.7.d">Roles para dueño, administrador y staff, con acceso al detalle que cada uno realmente necesita.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="benefits" id="benefits">
+    <div class="container">
+      <div class="sec-head" data-reveal>
+        <h2 class="sec-title">
+          <span data-i18n="benefits.title.a">De la intuición</span>
+          <span class="serif accent" data-i18n="benefits.title.b">a la decisión informada</span>
+        </h2>
+        <p class="sec-sub" data-i18n="benefits.sub">Cada función está pensada para liberar tiempo y dar visibilidad real al dueño del negocio.</p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="ben" data-reveal>
+          <div class="ben-num">01</div>
+          <h4 data-i18n="ben.1.t">Claridad de ingresos y gastos</h4>
+          <p data-i18n="ben.1.d">Sabes a dónde se va cada sol y de dónde viene cada venta.</p>
+        </div>
+        <div class="ben" data-reveal>
+          <div class="ben-num">02</div>
+          <h4 data-i18n="ben.2.t">Mejor control de inventario</h4>
+          <p data-i18n="ben.2.d">Compras con criterio, no por costumbre o por urgencia.</p>
+        </div>
+        <div class="ben" data-reveal>
+          <div class="ben-num">03</div>
+          <h4 data-i18n="ben.3.t">Menos desperdicio</h4>
+          <p data-i18n="ben.3.d">Las mermas dejan de ser un costo invisible.</p>
+        </div>
+        <div class="ben" data-reveal>
+          <div class="ben-num">04</div>
+          <h4 data-i18n="ben.4.t">Órdenes ordenadas</h4>
+          <p data-i18n="ben.4.d">Sala, delivery y mostrador hablan el mismo idioma.</p>
+        </div>
+        <div class="ben" data-reveal>
+          <div class="ben-num">05</div>
+          <h4 data-i18n="ben.5.t">Decisiones más rápidas</h4>
+          <p data-i18n="ben.5.d">Reaccionas en días, no a fin de mes.</p>
+        </div>
+        <div class="ben" data-reveal>
+          <div class="ben-num">06</div>
+          <h4 data-i18n="ben.6.t">Adiós hojas frágiles</h4>
+          <p data-i18n="ben.6.d">Olvídate de hojas de cálculo que se rompen y nadie sabe arreglar.</p>
+        </div>
+        <div class="ben" data-reveal>
+          <div class="ben-num">07</div>
+          <h4 data-i18n="ben.7.t">Tiempo administrativo</h4>
+          <p data-i18n="ben.7.d">Menos horas armando reportes, más horas en la cocina y la sala.</p>
+        </div>
+        <div class="ben" data-reveal>
+          <div class="ben-num">08</div>
+          <h4 data-i18n="ben.8.t">Rentabilidad por plato</h4>
+          <p data-i18n="ben.8.d">Sabes qué plato sostiene el negocio y cuál solo lo decora.</p>
+        </div>
+        <div class="ben" data-reveal>
+          <div class="ben-num">09</div>
+          <h4 data-i18n="ben.9.t">Sin saber contabilidad</h4>
+          <p data-i18n="ben.9.d">Pensado para dueños, no para auditores.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="how">
+    <div class="container">
+      <div class="sec-head" data-reveal>
+        <h2 class="sec-title">
+          <span data-i18n="how.title.a">Tres pasos para pasar del</span>
+          <span class="serif accent" data-i18n="how.title.b">caos al control</span>
+        </h2>
+      </div>
+
+      <div class="how-steps">
+        <div class="step" data-reveal>
+          <div class="step-num">1</div>
+          <h4 data-i18n="step.1.t">Registra tu restaurante</h4>
+          <p data-i18n="step.1.d">Crea tu cuenta y configura tu negocio en pocos minutos. Sin instalaciones complejas.</p>
+        </div>
+        <div class="step" data-reveal>
+          <div class="step-num">2</div>
+          <h4 data-i18n="step.2.t">Centraliza tu información</h4>
+          <p data-i18n="step.2.d">Sube órdenes, gastos, inventario e ingresos. Todo en un solo lugar, ordenado.</p>
+        </div>
+        <div class="step" data-reveal>
+          <div class="step-num">3</div>
+          <h4 data-i18n="step.3.t">Decide con datos</h4>
+          <p data-i18n="step.3.d">Revisa reportes claros y toma decisiones informadas sobre precios, menú y compras.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFFERENTIATION -->
+  <section class="diff">
+    <div class="container">
+      <div class="sec-head" data-reveal>
+        <h2 class="sec-title">
+          <span data-i18n="diff.title.a">Diseñado para restaurantes,</span>
+          <span class="serif accent" data-i18n="diff.title.b">no para auditores</span>
+        </h2>
+        <p class="sec-sub" data-i18n="diff.sub">Construido específicamente para la realidad de los restaurantes independientes y medianos.</p>
+      </div>
+
+      <div class="diff-table" data-reveal>
+        <div class="diff-row head">
+          <div data-i18n="diff.col.feat">Característica</div>
+          <div class="ff" data-i18n="diff.col.ff">FoodFlow</div>
+          <div data-i18n="diff.col.acc">Software contable</div>
+          <div data-i18n="diff.col.pos">POS tradicional</div>
+        </div>
+        <div class="diff-row">
+          <div class="feat-name" data-i18n="diff.r.1">Pensado para gastronomía</div>
+          <div class="ff"><span class="yes">●&nbsp;<span data-i18n="diff.yes">Sí</span></span></div>
+          <div><span class="no">○&nbsp;<span data-i18n="diff.no">No</span></span></div>
+          <div><span class="maybe">◐&nbsp;<span data-i18n="diff.partial">Parcial</span></span></div>
+        </div>
+        <div class="diff-row">
+          <div class="feat-name" data-i18n="diff.r.2">Inventario por insumo</div>
+          <div class="ff"><span class="yes">●&nbsp;<span data-i18n="diff.yes">Sí</span></span></div>
+          <div><span class="no">○&nbsp;<span data-i18n="diff.no">No</span></span></div>
+          <div><span class="maybe">◐&nbsp;<span data-i18n="diff.partial">Parcial</span></span></div>
+        </div>
+        <div class="diff-row">
+          <div class="feat-name" data-i18n="diff.r.3">Rentabilidad por plato</div>
+          <div class="ff"><span class="yes">●&nbsp;<span data-i18n="diff.yes">Sí</span></span></div>
+          <div><span class="no">○&nbsp;<span data-i18n="diff.no">No</span></span></div>
+          <div><span class="no">○&nbsp;<span data-i18n="diff.no">No</span></span></div>
+        </div>
+        <div class="diff-row">
+          <div class="feat-name" data-i18n="diff.r.4">Lenguaje sin jerga contable</div>
+          <div class="ff"><span class="yes">●&nbsp;<span data-i18n="diff.yes">Sí</span></span></div>
+          <div><span class="no">○&nbsp;<span data-i18n="diff.no">No</span></span></div>
+          <div><span class="yes">●&nbsp;<span data-i18n="diff.yes">Sí</span></span></div>
+        </div>
+        <div class="diff-row">
+          <div class="feat-name" data-i18n="diff.r.5">Precio accesible</div>
+          <div class="ff"><span class="yes">●&nbsp;<span data-i18n="diff.yes">Sí</span></span></div>
+          <div><span class="maybe">◐&nbsp;<span data-i18n="diff.partial">Parcial</span></span></div>
+          <div><span class="yes">●&nbsp;<span data-i18n="diff.yes">Sí</span></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANS -->
+  <section class="plans" id="plans">
+    <div class="container">
+      <div class="sec-head" data-reveal>
+        <h2 class="sec-title">
+          <span data-i18n="plans.title.a">Elige el plan que se adapta</span>
+          <span class="serif accent" data-i18n="plans.title.b">a tu cocina</span>
+        </h2>
+        <p class="sec-sub" data-i18n="plans.sub">Comienza con lo esencial y crece a tu ritmo. Cancela cuando quieras.</p>
+      </div>
+
+      <div class="plans-grid">
+        <article class="plan" data-reveal>
+          <div class="plan-name" data-i18n="plan.1.name">Basic</div>
+          <div class="price"><b>S/ 49</b><small data-i18n="plan.month">/ mes</small></div>
+          <p class="desc" data-i18n="plan.1.desc">Para negocios pequeños que quieren empezar a ordenarse.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="plan.1.f1">Finanzas centralizadas</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="plan.1.f2">Reportes diarios y semanales</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="plan.1.f3">Inventario básico</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="plan.1.f4">1 usuario administrador</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="plan.1.f5">Soporte por correo</span></li>
+          </ul>
+          <a class="btn btn-ghost" href="#contact" data-i18n="cta.choose">Elegir plan</a>
+        </article>
+
+        <article class="plan featured" data-reveal>
+          <div class="plan-name">
+            <span data-i18n="plan.2.name">Pro</span>
+            <span class="plan-tag" data-i18n="plan.tag.popular">Recomendado</span>
+          </div>
+          <div class="price"><b>S/ 89</b><small data-i18n="plan.month">/ mes</small></div>
+          <p class="desc" data-i18n="plan.2.desc">Para restaurantes que ya operan y quieren tomar decisiones con datos.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="plan.2.f1">Todo lo de Basic</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="plan.2.f2">Análisis de platos estrella</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="plan.2.f3">Control de órdenes integrado</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="plan.2.f4">Hasta 5 usuarios</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="plan.2.f5">Reportes mensuales avanzados</span></li>
+          </ul>
+          <a class="btn btn-orange" href="#contact" data-i18n="cta.choose">Elegir plan</a>
+        </article>
+
+        <article class="plan" data-reveal>
+          <div class="plan-name" data-i18n="plan.3.name">Premium</div>
+          <div class="price"><b>S/ 149</b><small data-i18n="plan.month">/ mes</small></div>
+          <p class="desc" data-i18n="plan.3.desc">Para grupos de restaurantes y negocios con varios locales o turnos.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="plan.3.f1">Todo lo de Pro</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="plan.3.f2">Múltiples locales</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="plan.3.f3">Usuarios ilimitados</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="plan.3.f4">Reportes personalizados</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="plan.3.f5">Soporte prioritario</span></li>
+          </ul>
+          <a class="btn btn-ghost" href="#contact" data-i18n="cta.choose">Elegir plan</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final" id="contact">
+    <div class="container">
+      <div class="final-card" data-reveal>
+        <h2>
+          <span data-i18n="final.title.a">Empieza a gestionar tu restaurante con</span><br>
+          <span class="serif" data-i18n="final.title.b">datos, no con intuición.</span>
+        </h2>
+        <p data-i18n="final.sub">Únete a los restaurantes que están reemplazando cuadernos y hojas de cálculo por una sola fuente de verdad.</p>
+        <div class="hero-ctas" style="position:relative">
+          <a class="btn btn-primary" href="#plans">
+            <span data-i18n="cta.start">Comenzar ahora</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+        <form class="final-form" aria-label="Formulario de contacto" data-i18n-aria-label="form.aria">
+          <input type="text" name="name" placeholder="Nombre" data-i18n-placeholder="form.name" required>
+          <input type="email" name="email" placeholder="Correo" data-i18n-placeholder="form.email" required>
+          <input type="tel" name="phone" placeholder="Teléfono" data-i18n-placeholder="form.phone" required>
+          <button class="btn btn-ghost" type="submit" data-i18n="form.submit">Enviar</button>
+          <textarea name="message" placeholder="Cuéntanos sobre tu restaurante" data-i18n-placeholder="form.message" required></textarea>
+        </form>
+        <div class="final-deco"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <a href="#home" class="brand">
+            <span class="brand-mark" aria-hidden="true">
+              <img src="public/assets/images/foodflow-mark.png" alt="" />
+            </span>
+            <span class="brand-text" style="color:var(--cream)">FoodFlow</span>
+          </a>
+          <p data-i18n="foot.desc">FoodFlow by ClaudeFlow — Inteligencia financiera para restaurantes independientes y medianos.</p>
+          <div class="foot-by">
+            <img src="public/assets/images/claudeflow-logo.png" alt="ClaudeFlow">
+            <div>
+              <div data-i18n="foot.by">Un producto de</div>
+              <b>ClaudeFlow</b>
+            </div>
+          </div>
+        </div>
+        <div class="foot-col">
+          <h5 data-i18n="foot.product">Producto</h5>
+          <a href="#features" data-i18n="nav.features">Funciones</a>
+          <a href="#benefits" data-i18n="nav.benefits">Beneficios</a>
+          <a href="#how" data-i18n="nav.how">Cómo funciona</a>
+          <a href="#plans" data-i18n="nav.plans">Planes</a>
+        </div>
+        <div class="foot-col">
+          <h5 data-i18n="foot.company">Compañía</h5>
+          <a href="#" data-i18n="foot.about">Sobre ClaudeFlow</a>
+          <a href="#" data-i18n="foot.team">Equipo</a>
+          <a href="#contact" data-i18n="nav.contact">Contacto</a>
+        </div>
+        <div class="foot-col">
+          <h5>Redes</h5>
+          <div class="socials">
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M13 10h3l-.4 3H13v8h-3v-8H8v-3h2V8.3C10 6 11.3 4 14 4h2v3h-2c-.7 0-1 .4-1 1V10z" />
+              </svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17" cy="7" r="1" />
+              </svg>
+            </a>
+            <a href="#" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 4a8 8 0 0 0-6.9 12l-1 4 4.1-1A8 8 0 1 0 12 4zm4.4 11.3c-.2.6-1.2 1-1.7 1.1-.4.1-.9.1-1.5-.1a13.5 13.5 0 0 1-2.6-1.2 10.2 10.2 0 0 1-3.4-3.7c-.3-.5-.8-1.3-.8-2.2 0-.9.5-1.4.7-1.6.2-.2.4-.3.6-.3h.4c.1 0 .3 0 .5.4.2.5.6 1.6.6 1.7 0 .1.1.3 0 .5 0 .2-.1.3-.2.4-.1.1-.3.3-.4.4-.1.1-.3.3-.2.5.2.4.9 1.6 2 2.5 1.4 1.3 2.6 1.6 2.9 1.7.2.1.4.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.3.6-.2.2.1 1.4.7 1.7.8.2.1.4.2.5.3.1.1.1.5-.1 1z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="foot-col">
+          <h5 data-i18n="foot.resources">Recursos</h5>
+          <a href="#" data-i18n="foot.blog">Blog</a>
+          <a href="#" data-i18n="foot.privacy">Privacidad</a>
+          <a href="#" data-i18n="foot.terms">Términos</a>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span data-i18n="foot.copy">© 2026 ClaudeFlow. Todos los derechos reservados.</span>
+        <div class="lang" id="lang-switch-foot">
+          <button data-lang="es" class="active">
+            <span class="lang-flag" aria-hidden="true">
+              <svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
+                <rect width="18" height="12" fill="#C60B1E"/>
+                <rect y="3" width="18" height="6" fill="#FFC400"/>
+              </svg>
+            </span>
+            <span class="lang-label">ES</span>
+          </button>
+          <button data-lang="en">
+            <span class="lang-flag" aria-hidden="true">
+              <svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
+                <rect width="18" height="12" fill="#012169"/>
+                <path d="M0 0l18 12M18 0L0 12" stroke="#FFFFFF" stroke-width="3"/>
+                <path d="M0 0l18 12M18 0L0 12" stroke="#C8102E" stroke-width="1.5"/>
+                <path d="M9 0v12M0 6h18" stroke="#FFFFFF" stroke-width="4"/>
+                <path d="M9 0v12M0 6h18" stroke="#C8102E" stroke-width="2"/>
+              </svg>
+            </span>
+            <span class="lang-label">EN</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="public/assets/scripts/scripts.js"></script>
+
+</body>
+
+</html>
