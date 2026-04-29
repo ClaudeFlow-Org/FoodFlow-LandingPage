@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preguntas Frecuentes | FoodFlow</title>
+  <link rel="icon" href="public/assets/images/foodflow-mark.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="public/assets/styles/styles.css">
+</head>
+
+<body data-page-title="Preguntas Frecuentes | FoodFlow" data-i18n-title="faq.page.title">
+  <nav class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="index.html#home" class="brand">
+        <span class="brand-mark" aria-hidden="true"><img src="public/assets/images/foodflow-mark.png" alt=""></span>
+        <span class="brand-text">FoodFlow</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#home" data-i18n="nav.home">Inicio</a>
+        <a href="index.html#features" data-i18n="nav.features">Funciones</a>
+        <a href="index.html#benefits" data-i18n="nav.benefits">Beneficios</a>
+        <a href="index.html#about" data-i18n="nav.about">Sobre nosotros</a>
+        <a href="index.html#how" data-i18n="nav.how">Cómo funciona</a>
+        <a href="index.html#plans" data-i18n="nav.plans">Planes</a>
+        <a href="index.html#contact" data-i18n="nav.contact">Contacto</a>
+      </div>
+      <div class="nav-right">
+        <div class="lang" id="lang-switch">
+          <button data-lang="es" class="active">
+            <span class="lang-flag" aria-hidden="true"><svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg"><rect width="18" height="12" fill="#C60B1E"/><rect y="3" width="18" height="6" fill="#FFC400"/></svg></span>
+            <span class="lang-label">ES</span>
+          </button>
+          <button data-lang="en">
+            <span class="lang-flag" aria-hidden="true"><svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg"><rect width="18" height="12" fill="#012169"/><path d="M0 0l18 12M18 0L0 12" stroke="#FFFFFF" stroke-width="3"/><path d="M0 0l18 12M18 0L0 12" stroke="#C8102E" stroke-width="1.5"/><path d="M9 0v12M0 6h18" stroke="#FFFFFF" stroke-width="4"/><path d="M9 0v12M0 6h18" stroke="#C8102E" stroke-width="2"/></svg></span>
+            <span class="lang-label">EN</span>
+          </button>
+        </div>
+        <a class="btn btn-primary" href="index.html#plans" data-i18n="cta.start">Comenzar ahora</a>
+        <button class="menu-toggle btn-ghost btn" id="menu-toggle" aria-label="Menú" data-i18n-aria-label="nav.menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html#home" data-i18n="nav.home">Inicio</a>
+      <a href="index.html#features" data-i18n="nav.features">Funciones</a>
+      <a href="index.html#benefits" data-i18n="nav.benefits">Beneficios</a>
+      <a href="index.html#about" data-i18n="nav.about">Sobre nosotros</a>
+      <a href="index.html#how" data-i18n="nav.how">Cómo funciona</a>
+      <a href="index.html#plans" data-i18n="nav.plans">Planes</a>
+      <a href="index.html#contact" data-i18n="nav.contact">Contacto</a>
+      <a class="btn btn-primary" href="index.html#plans" data-i18n="cta.start">Comenzar ahora</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="container" data-reveal>
+        <span class="page-kicker" data-i18n="faq.kicker">FAQ</span>
+        <h1 class="page-title" data-i18n="faq.title">Preguntas frecuentes</h1>
+        <p class="page-sub" data-i18n="faq.sub">Respuestas más completas sobre FoodFlow, su enfoque financiero, los planes, el tipo de restaurante al que ayuda y la diferencia frente a hojas de cálculo o sistemas POS tradicionales.</p>
+      </div>
+    </section>
+
+    <section class="legal-section">
+      <div class="container faq-layout">
+        <div class="faq-filter-bar" role="tablist" aria-label="Filtrar preguntas frecuentes" data-i18n-aria-label="faq.filter.aria">
+          <button type="button" class="faq-filter active" data-faq-filter="all" data-i18n="faq.filter.all">Todos</button>
+          <button type="button" class="faq-filter" data-faq-filter="producto" data-i18n="faq.filter.product">Producto</button>
+          <button type="button" class="faq-filter" data-faq-filter="finanzas" data-i18n="faq.filter.finance">Finanzas</button>
+          <button type="button" class="faq-filter" data-faq-filter="operacion" data-i18n="faq.filter.operation">Operación</button>
+          <button type="button" class="faq-filter" data-faq-filter="planes" data-i18n="faq.filter.plans">Planes</button>
+        </div>
+        <article class="legal-content faq-content" data-reveal>
+          <h2 data-i18n="faq.heading">Dudas comunes sobre FoodFlow</h2>
+          <div class="faq-list">
+            <div class="faq-item" data-faq-category="producto">
+              <h3 data-i18n="faq.q1">¿Qué es FoodFlow?</h3>
+              <p data-i18n="faq.a1">FoodFlow es una aplicación web orientada a restaurantes que necesitan centralizar información financiera y operativa. Permite organizar ingresos, gastos, inventario, órdenes, platos y reportes para que el dueño tenga una lectura más clara del negocio.</p>
+            </div>
+            <div class="faq-item" data-faq-category="producto">
+              <h3 data-i18n="faq.q2">¿Qué problema busca resolver?</h3>
+              <p data-i18n="faq.a2">Muchos restaurantes venden todos los días, pero no siempre saben cuánto ganan realmente. FoodFlow busca reducir la dependencia de cuadernos, hojas de cálculo frágiles o información dispersa, transformando esos datos en reportes útiles para decidir mejor.</p>
+            </div>
+            <div class="faq-item" data-faq-category="finanzas">
+              <h3 data-i18n="faq.q3">¿FoodFlow reemplaza a un contador?</h3>
+              <p data-i18n="faq.a3">No. FoodFlow no reemplaza asesoría contable, tributaria o legal. Su objetivo es ayudar al dueño a entender su operación diaria, visualizar métricas y preparar mejor la información que luego puede revisar con especialistas.</p>
+            </div>
+            <div class="faq-item" data-faq-category="finanzas">
+              <h3 data-i18n="faq.q4">¿Qué métricas puedo revisar?</h3>
+              <p data-i18n="faq.a4">Podrás revisar ingresos, gastos, costos fijos y variables, flujo de caja, inventario, margen aproximado, platos con mayor venta, rentabilidad por plato y reportes por periodo. La idea es que cada dato conecte con una decisión práctica.</p>
+            </div>
+            <div class="faq-item" data-faq-category="operacion">
+              <h3 data-i18n="faq.q5">¿Está pensado para restaurantes pequeños?</h3>
+              <p data-i18n="faq.a5">Sí. FoodFlow está pensado especialmente para negocios pequeños y medianos que no cuentan con equipos financieros grandes y que suelen operar con procesos manuales. La interfaz prioriza claridad, lenguaje simple y control diario.</p>
+            </div>
+            <div class="faq-item" data-faq-category="operacion">
+              <h3 data-i18n="faq.q6">¿En qué se diferencia de un POS?</h3>
+              <p data-i18n="faq.a6">Un POS suele enfocarse en registrar ventas y órdenes. FoodFlow se enfoca en interpretar la salud financiera del restaurante: qué se vendió, cuánto costó, qué margen dejó, cómo se mueve el inventario y qué decisiones conviene tomar.</p>
+            </div>
+            <div class="faq-item" data-faq-category="operacion">
+              <h3 data-i18n="faq.q7">¿Necesito tener todos mis datos ordenados antes de usarlo?</h3>
+              <p data-i18n="faq.a7">No necesariamente. Puedes empezar con información base e ir completando el modelo conforme el restaurante adopta mejores hábitos de registro. FoodFlow está pensado para acompañar esa transición hacia una operación más ordenada.</p>
+            </div>
+            <div class="faq-item" data-faq-category="planes">
+              <h3 data-i18n="faq.q8">¿Cuántos usuarios incluye el plan Pro?</h3>
+              <p data-i18n="faq.a8">El plan Pro incluye hasta 10 usuarios, pensado para restaurantes que ya operan con un equipo más amplio y necesitan que administración, responsables de inventario o encargados de operación accedan a información relevante.</p>
+            </div>
+            <div class="faq-item" data-faq-category="planes">
+              <h3 data-i18n="faq.q9">¿Puedo solicitar una demostración?</h3>
+              <p data-i18n="faq.a9">Sí. Puedes escribirnos desde la sección de contacto para coordinar una presentación, explicar cómo trabaja tu restaurante y revisar qué módulos serían más útiles para tu situación actual.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <a href="index.html#home" class="brand">
+            <span class="brand-mark" aria-hidden="true"><img src="public/assets/images/foodflow-mark.png" alt=""></span>
+            <span class="brand-text" style="color:var(--cream)">FoodFlow</span>
+          </a>
+          <p data-i18n="foot.desc">FoodFlow by ClaudeFlow — Inteligencia financiera para restaurantes independientes y medianos.</p>
+          <div class="foot-by">
+            <img src="public/assets/images/claudeflow-logo.png" alt="ClaudeFlow">
+            <div><div data-i18n="foot.by">Un producto de</div><b>ClaudeFlow</b></div>
+          </div>
+        </div>
+        <div class="foot-col">
+          <h5 data-i18n="foot.product">Producto</h5>
+          <a href="index.html#home" data-i18n="nav.home">Inicio</a>
+          <a href="index.html#features" data-i18n="nav.features">Funciones</a>
+          <a href="index.html#benefits" data-i18n="nav.benefits">Beneficios</a>
+          <a href="index.html#about" data-i18n="foot.about">Sobre nosotros</a>
+          <a href="index.html#how" data-i18n="nav.how">Cómo funciona</a>
+          <a href="index.html#plans" data-i18n="nav.plans">Planes</a>
+        </div>
+        <div class="foot-col">
+          <h5 data-i18n="foot.legal">Legal</h5>
+          <button type="button" class="footer-link" data-legal-open="terms" data-i18n="foot.terms">Términos y Condiciones</button>
+          <button type="button" class="footer-link" data-legal-open="privacy" data-i18n="foot.privacy">Política de Privacidad</button>
+        </div>
+        <div class="foot-col">
+          <h5 data-i18n="foot.resources">Recursos</h5>
+          <a href="ayuda.html" data-i18n="foot.support">Ayuda</a>
+          <a href="preguntas-frecuentes.html" data-i18n="foot.faq">Preguntas frecuentes</a>
+          <a href="index.html#contact" data-i18n="nav.contact">Contacto</a>
+        </div>
+        <div class="foot-col foot-social">
+          <h5 data-i18n="foot.social">Redes</h5>
+          <div class="socials">
+            <a href="index.html#contact" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 10h3l-.4 3H13v8h-3v-8H8v-3h2V8.3C10 6 11.3 4 14 4h2v3h-2c-.7 0-1 .4-1 1V10z" /></svg></a>
+            <a href="index.html#contact" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17" cy="7" r="1" /></svg></a>
+            <a href="index.html#contact" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 4a8 8 0 0 0-6.9 12l-1 4 4.1-1A8 8 0 1 0 12 4zm4.4 11.3c-.2.6-1.2 1-1.7 1.1-.4.1-.9.1-1.5-.1a13.5 13.5 0 0 1-2.6-1.2 10.2 10.2 0 0 1-3.4-3.7c-.3-.5-.8-1.3-.8-2.2 0-.9.5-1.4.7-1.6.2-.2.4-.3.6-.3h.4c.1 0 .3 0 .5.4.2.5.6 1.6.6 1.7 0 .1.1.3 0 .5 0 .2-.1.3-.2.4-.1.1-.3.3-.4.4-.1.1-.3.3-.2.5.2.4.9 1.6 2 2.5 1.4 1.3 2.6 1.6 2.9 1.7.2.1.4.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.3.6-.2.2.1 1.4.7 1.7.8.2.1.4.2.5.3.1.1.1.5-.1 1z" /></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span data-i18n="foot.copy">© 2026 ClaudeFlow. Todos los derechos reservados.</span>
+        <div class="lang" id="lang-switch-foot">
+          <button data-lang="es" class="active">
+            <span class="lang-flag" aria-hidden="true"><svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg"><rect width="18" height="12" fill="#C60B1E"/><rect y="3" width="18" height="6" fill="#FFC400"/></svg></span>
+            <span class="lang-label">ES</span>
+          </button>
+          <button data-lang="en">
+            <span class="lang-flag" aria-hidden="true"><svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg"><rect width="18" height="12" fill="#012169"/><path d="M0 0l18 12M18 0L0 12" stroke="#FFFFFF" stroke-width="3"/><path d="M0 0l18 12M18 0L0 12" stroke="#C8102E" stroke-width="1.5"/><path d="M9 0v12M0 6h18" stroke="#FFFFFF" stroke-width="4"/><path d="M9 0v12M0 6h18" stroke="#C8102E" stroke-width="2"/></svg></span>
+            <span class="lang-label">EN</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="public/assets/scripts/scripts.js"></script>
+</body>
+
+</html>
