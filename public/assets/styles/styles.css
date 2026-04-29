@@ -1480,6 +1480,8 @@
       border-radius: var(--radius-xl);
       padding: 36px 30px;
       position: relative;
+      display: flex;
+      flex-direction: column;
       transition: all .35s cubic-bezier(.4, 0, .2, 1)
     }
 
@@ -1562,7 +1564,7 @@
       list-style: none;
       padding: 0;
       margin: 0 0 32px;
-      min-height: 220px
+      flex: 1
     }
 
     .plan ul li {
@@ -1587,7 +1589,8 @@
 
     .plan .btn {
       width: 100%;
-      justify-content: center
+      justify-content: center;
+      margin-top: auto
     }
 
     .plan.featured .btn-ghost {
