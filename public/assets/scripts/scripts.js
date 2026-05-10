@@ -389,10 +389,31 @@
     document.querySelectorAll('.lang button').forEach(btn => {
       btn.addEventListener('click', () => applyLang(btn.dataset.lang));
     });
-    applyLang(currentLang);
+    if (currentLang === 'es') {
+      document.documentElement.lang = 'es';
+      document.body.classList.add('lang-es');
+      document.body.classList.remove('lang-en');
+      document.querySelectorAll('.lang button').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === 'es');
+      });
+    } else {
+      applyLang(currentLang);
+    }
+
+    const runWhenIdle = (callback) => {
+      if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(callback, { timeout: 1200 });
+        return;
+      }
+      window.setTimeout(callback, 1);
+    };
 
     /* ============ LEGAL MODALS ============ */
-    const LEGAL_CONTENT = {
+    function initLegalModals() {
+      const triggers = document.querySelectorAll('[data-legal-open]');
+      if (!triggers.length) return;
+
+      const LEGAL_CONTENT = {
       es: {
         terms: {
           eyebrow: 'Legal',
@@ -523,11 +544,7 @@
           `
         }
       }
-    };
-
-    function initLegalModals() {
-      const triggers = document.querySelectorAll('[data-legal-open]');
-      if (!triggers.length) return;
+      };
 
       const modal = document.createElement('div');
       modal.className = 'legal-modal';
@@ -592,7 +609,6 @@
         if (event.key === 'Escape' && modal.classList.contains('open')) closeModal();
       });
     }
-    initLegalModals();
 
     /* ============ FAQ FILTERS ============ */
     function initFaqFilters() {
@@ -611,7 +627,6 @@
         });
       });
     }
-    initFaqFilters();
 
     /* ============ NAV SCROLL ============ */
     const nav = document.getElementById('nav');
@@ -643,16 +658,24 @@
     }
 
     /* ============ REVEAL ============ */
-    if ('IntersectionObserver' in window) {
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-          if (e.isIntersecting) {
-            e.target.classList.add('in');
-            io.unobserve(e.target);
-          }
-        });
-      }, { threshold: .12 });
-      document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
-    } else {
-      document.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('in'));
+    function initReveal() {
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              e.target.classList.add('in');
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: .12 });
+        document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+      } else {
+        document.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('in'));
+      }
     }
+
+    runWhenIdle(() => {
+      initLegalModals();
+      initFaqFilters();
+      initReveal();
+    });
