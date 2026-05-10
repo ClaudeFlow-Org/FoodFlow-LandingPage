@@ -616,9 +616,22 @@
     /* ============ NAV SCROLL ============ */
     const nav = document.getElementById('nav');
     if (nav) {
-      const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+      let navIsScrolled = nav.classList.contains('scrolled');
+      let navScrollTicking = false;
+      const updateNavState = () => {
+        navScrollTicking = false;
+        const shouldBeScrolled = window.scrollY > 8;
+        if (shouldBeScrolled === navIsScrolled) return;
+        navIsScrolled = shouldBeScrolled;
+        nav.classList.toggle('scrolled', shouldBeScrolled);
+      };
+      const onScroll = () => {
+        if (navScrollTicking) return;
+        navScrollTicking = true;
+        requestAnimationFrame(updateNavState);
+      };
       window.addEventListener('scroll', onScroll, { passive: true });
-      onScroll();
+      updateNavState();
     }
 
     /* ============ MOBILE MENU ============ */

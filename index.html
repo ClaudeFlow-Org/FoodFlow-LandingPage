@@ -5,11 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FoodFlow</title>
-  <link rel="icon" href="public/assets/images/foodflow-mark.png" type="image/png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="public/assets/styles/styles.css">
+  <link rel="icon" href="public/assets/images/favicon.png" type="image/png">
+  <link rel="preload" href="public/assets/images/foodflow-mark.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="stylesheet" href="public/assets/styles/styles.min.css">
+  <script defer src="public/assets/scripts/scripts.min.js"></script>
 </head>
 
 <body data-cc-id="cc-1">
@@ -19,7 +18,7 @@
     <div class="container nav-inner">
       <a href="#home" class="brand">
         <span class="brand-mark" aria-hidden="true">
-          <img src="public/assets/images/foodflow-mark.png" alt="" />
+          <img src="public/assets/images/foodflow-mark.webp" alt="" width="157" height="149" decoding="async" fetchpriority="high" />
         </span>
         <span class="brand-text">FoodFlow</span>
       </a>
@@ -58,7 +57,7 @@
             <span class="lang-label">EN</span>
           </button>
         </div>
-        <a class="btn btn-primary" href="#plans" data-i18n="cta.start">Comenzar ahora</a>
+        <a class="btn btn-primary" href="https://foodflowfrontend.vercel.app/" data-i18n="cta.start">Comenzar ahora</a>
         <button class="menu-toggle btn-ghost btn" id="menu-toggle" aria-label="Menú" data-i18n-aria-label="nav.menu">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
             <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -76,7 +75,7 @@
       <a href="#how" data-i18n="nav.how">Cómo funciona</a>
       <a href="#plans" data-i18n="nav.plans">Planes</a>
       <a href="#contact" data-i18n="nav.contact">Contacto</a>
-      <a class="btn btn-primary" href="#plans" data-i18n="cta.start">Comenzar ahora</a>
+      <a class="btn btn-primary" href="https://foodflowfrontend.vercel.app/" data-i18n="cta.start">Comenzar ahora</a>
     </div>
   </nav>
 
@@ -92,7 +91,7 @@
         </h1>
         <p class="hero-sub" data-i18n="hero.sub">FoodFlow centraliza ingresos, gastos, inventario, órdenes y reportes para que tomes decisiones más inteligentes.</p>
         <div class="hero-ctas">
-          <a class="btn btn-orange" href="#plans">
+          <a class="btn btn-orange" href="https://foodflowfrontend.vercel.app/">
             <span data-i18n="cta.start">Comenzar ahora</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
               <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -161,7 +160,7 @@
         </div>
 
         <div class="ha-dish">
-          <img src="public/assets/images/foodflow-mark.png" alt="FoodFlow" />
+          <img src="public/assets/images/foodflow-mark.webp" alt="FoodFlow" width="157" height="149" decoding="async" fetchpriority="high" />
         </div>
       </div>
     </div>
@@ -303,7 +302,7 @@
       <div class="solution-art" data-reveal aria-hidden="true">
         <div class="orbit"></div>
         <div class="orbit orbit-2"></div>
-        <div class="center-orb"><img src="public/assets/images/foodflow-mark.png" alt="FoodFlow" /></div>
+        <div class="center-orb"><img src="public/assets/images/foodflow-mark.webp" alt="FoodFlow" width="157" height="149" loading="lazy" decoding="async" /></div>
 
         <div class="orbit-pill op-1">
           <span class="ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></span>
@@ -603,11 +602,11 @@
         <div class="about-brand-card">
           <div class="about-logo-row">
             <div class="about-logo-box">
-              <img src="public/assets/images/claudeflow-logo.png" alt="ClaudeFlow">
+              <img src="public/assets/images/claudeflow-logo.webp" alt="ClaudeFlow" width="240" height="240" loading="lazy" decoding="async">
             </div>
             <span class="about-link-line"></span>
             <div class="about-logo-box foodflow-logo">
-              <img src="public/assets/images/foodflow-mark.png" alt="FoodFlow">
+              <img src="public/assets/images/foodflow-mark.webp" alt="FoodFlow" width="157" height="149" loading="lazy" decoding="async">
             </div>
           </div>
           <div class="about-brand-text">
@@ -699,7 +698,7 @@
         </h2>
         <p data-i18n="final.sub">Únete a los restaurantes que están reemplazando cuadernos y hojas de cálculo por una sola fuente de verdad.</p>
         <div class="hero-ctas" style="position:relative">
-          <a class="btn btn-primary" href="#plans">
+          <a class="btn btn-primary" href="https://foodflowfrontend.vercel.app/">
             <span data-i18n="cta.start">Comenzar ahora</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
               <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -726,13 +725,13 @@
         <div class="foot-brand">
           <a href="#home" class="brand">
             <span class="brand-mark" aria-hidden="true">
-              <img src="public/assets/images/foodflow-mark.png" alt="" />
+              <img src="public/assets/images/foodflow-mark.webp" alt="" width="157" height="149" loading="lazy" decoding="async" />
             </span>
             <span class="brand-text" style="color:var(--cream)">FoodFlow</span>
           </a>
           <p data-i18n="foot.desc">FoodFlow by ClaudeFlow — Inteligencia financiera para restaurantes independientes y medianos.</p>
           <div class="foot-by">
-            <img src="public/assets/images/claudeflow-logo.png" alt="ClaudeFlow">
+            <img src="public/assets/images/claudeflow-logo.webp" alt="ClaudeFlow" width="240" height="240" loading="lazy" decoding="async">
             <div>
               <div data-i18n="foot.by">Un producto de</div>
               <b>ClaudeFlow</b>
@@ -810,8 +809,6 @@
       </div>
     </div>
   </footer>
-  <script src="public/assets/scripts/scripts.js"></script>
-
 </body>
 
 </html>
