@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FoodFlow</title>
   <link rel="icon" href="public/assets/images/favicon.png" type="image/png">
-  <link rel="preload" href="public/assets/images/foodflow-mark.webp" as="image" type="image/webp" fetchpriority="high">
-  <link rel="stylesheet" href="public/assets/styles/styles.min.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="public/assets/styles/critical.min.css">
+  <link rel="stylesheet" href="public/assets/styles/styles.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="public/assets/styles/styles.min.css"></noscript>
   <script defer src="public/assets/scripts/scripts.min.js"></script>
 </head>
 
@@ -18,7 +20,7 @@
     <div class="container nav-inner">
       <a href="#home" class="brand">
         <span class="brand-mark" aria-hidden="true">
-          <img src="public/assets/images/foodflow-mark.webp" alt="" width="157" height="149" decoding="async" fetchpriority="high" />
+          <img src="public/assets/images/foodflow-mark.webp" alt="" width="157" height="149" decoding="async" />
         </span>
         <span class="brand-text">FoodFlow</span>
       </a>
@@ -160,7 +162,7 @@
         </div>
 
         <div class="ha-dish">
-          <img src="public/assets/images/foodflow-mark.webp" alt="FoodFlow" width="157" height="149" decoding="async" fetchpriority="high" />
+          <img src="public/assets/images/foodflow-mark.webp" alt="FoodFlow" width="157" height="149" decoding="async" fetchpriority="low" />
         </div>
       </div>
     </div>

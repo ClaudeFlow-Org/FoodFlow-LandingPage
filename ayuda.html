@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ayuda | FoodFlow</title>
   <link rel="icon" href="public/assets/images/favicon.png" type="image/png">
-  <link rel="preload" href="public/assets/images/foodflow-mark.webp" as="image" type="image/webp" fetchpriority="high">
-  <link rel="stylesheet" href="public/assets/styles/styles.min.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="public/assets/styles/critical.min.css">
+  <link rel="stylesheet" href="public/assets/styles/styles.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="public/assets/styles/styles.min.css"></noscript>
   <script defer src="public/assets/scripts/scripts.min.js"></script>
 </head>
 
@@ -16,7 +18,7 @@
     <div class="container nav-inner">
       <a href="index.html#home" class="brand">
         <span class="brand-mark" aria-hidden="true">
-          <img src="public/assets/images/foodflow-mark.webp" alt="" width="157" height="149" decoding="async" fetchpriority="high">
+          <img src="public/assets/images/foodflow-mark.webp" alt="" width="157" height="149" decoding="async">
         </span>
         <span class="brand-text">FoodFlow</span>
       </a>
@@ -64,7 +66,7 @@
 
   <main>
     <section class="page-hero">
-      <div class="container" data-reveal>
+      <div class="container in" data-reveal>
         <span class="page-kicker" data-i18n="help.kicker">Ayuda</span>
         <h1 class="page-title" data-i18n="help.title">Centro de ayuda</h1>
         <p class="page-sub" data-i18n="help.sub">Una guía práctica para entender cómo empezar con FoodFlow, qué información conviene ordenar primero y cómo pedir apoyo si tu restaurante necesita una demostración o acompañamiento.</p>

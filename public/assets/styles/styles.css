@@ -101,6 +101,8 @@
       padding: 0 24px
     }
 
+    .problem,
+    .solution,
     .features,
     .benefits,
     .how,
@@ -818,7 +820,7 @@
     }
 
     .trust-list span:not(:last-child)::after {
-      content: "·";
+      content: "\00b7";
       position: absolute;
       right: -22px;
       color: var(--orange);
@@ -2541,15 +2543,30 @@
     }
 
     /* reveal */
-    [data-reveal] {
+    .js [data-reveal] {
       opacity: 0;
       transform: translateY(24px);
       transition: opacity .8s cubic-bezier(.4, 0, .2, 1), transform .8s cubic-bezier(.4, 0, .2, 1)
     }
 
-    [data-reveal].in {
+    .js [data-reveal].in {
       opacity: 1;
       transform: none
+    }
+
+    @media (max-width: 980px) {
+      .hero-bg,
+      .hero-art,
+      .ha-glow,
+      .ha-receipt,
+      .ha-metric,
+      .ha-flow,
+      .ha-inv,
+      .ha-dish,
+      .ha-dish::before,
+      .lang button.active {
+        animation: none
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -2571,7 +2588,7 @@
         transition: none
       }
 
-      [data-reveal] {
+      .js [data-reveal] {
         transition: none
       }
     }
